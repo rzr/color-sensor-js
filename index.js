@@ -1,5 +1,5 @@
-// -*- mode: js; js-indent-level:2; -*-
-// SPDX-License-Identifier: Apache-2.0
+/* -*- mode: js; js-indent-level:2; -*-
+   SPDX-License-Identifier: Apache-2.0 */
 /* Copyright 2018-present Samsung Electronics France
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,5 +15,4 @@
  * limitations under the License.
  */
 
-'use strict';
-
+module.exports = require('./lib')
