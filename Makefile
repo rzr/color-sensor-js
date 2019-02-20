@@ -116,3 +116,7 @@ lint/%: eslint
 
 lint: lint/${runtime}
 	echo "$@: $^"
+
+iotjs/run: lib/simulator.js example/index.js
+	iotjs $<
+	iotjs example/index.js
