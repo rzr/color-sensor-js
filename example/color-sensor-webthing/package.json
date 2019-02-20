@@ -1,0 +1,34 @@
+{
+  "name": "color-sensor-webthing",
+  "version": "0.0.0",
+  "description": "Webthing example to be used as standalone or with Mozilla's IoT gateway",
+  "main": "index.js",
+  "scripts": {
+    "start": "NODE_PATH=node_modules:../.. node index"
+  },
+  "author": "Philippe Coval <p.coval@samsung.com> (https://www.npmjs.com/~rzr)",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "i2c": "^0.2.3",
+    "webthing": "^0.11.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rzr/color-sensor-js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rzr/color-sensor-js/issues"
+  },
+  "homepage": "https://github.com/rzr/color-sensor-js#readme",
+  "keywords": [
+    "color",
+    "colorsensor",
+    "color-sensor",
+    "iotjs-module",
+    "iotjs-supported",
+    "moziot",
+    "sensors",
+    "webthing",
+    "wot"
+  ]
+}
