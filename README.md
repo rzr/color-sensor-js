@@ -98,3 +98,7 @@ but it can work with any regular material.
 * https://www.broadcom.com/products/optical-sensors/integrated-ambient-light-and-proximity-sensors/apds-9960
 * https://github.com/rzr/webthing-iotjs/wiki/Sensor
 * https://github.com/rzr/generic-sensors-lite
+* https://fosdem.org/2019/schedule/event/project_things/
+* https://api.npms.io/v2/package/color-sensor-js
+* https://npm.runkit.com/color-sensor-js
+
