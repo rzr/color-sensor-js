@@ -7,10 +7,28 @@ Copyright 2019-present Samsung Electronics France SAS, and other contributors
     <meta charset="utf-8"/>
   </head>
   <body>
+    <from name="config">
+      <label for="property">Property name:</label><br/>
+      <input id="property" value="color" label="prop"/>
+      <p/>
+      <label for="url">Base URL:</label><br/>
+      <input id="url" value="http://localhost:8888"/>
+      <p/>
+      <label for="wsUrl">WebSocket URL:</label><br/>
+      <input id="wsUrl" value="ws://localhost:8888"/>
+      <p/>
+      <label for="useWs">Use Websockets or HTTP polling as fallback:</label><br/>
+      <input id="useWs" type="checkbox" checked="true" onChange="toggle(false)"/>
+      <p/>
+      <label for="pause">Running/Pause:<label/><br/>
+      <input id="pause" type="checkbox" checked="true" onChange="toggle(this.checked)"/>
+      <p/>
+    </form>
   </body>
     <script type="text/javascript"><!--
-let url = 'http://localhost:8888/properties/color';
-let wsUrl = 'ws://localhost:8888';
+let interval = null;
+let ws = null;
+
 
 function update(color)
 {
@@ -19,24 +37,76 @@ function update(color)
   document.body.style.background = color;
 }
 
-update('#C0C0C0');
 
-if ("WebSocket" in window) {
-  var ws = new WebSocket(wsUrl);
-  ws.onmessage = function (evt) {
-    update(JSON.parse(evt.data).data.color);
+function poll(delay)
+{
+  let property = document.getElementById('property').value;
+  let url = document.getElementById('url').value + '/properties/' + property;
+
+  if (!delay) {
+    delay = 1000;
   }
-} else {
-  setInterval(function(){
+  interval = setInterval(function(){
+    if (!document.getElementById('pause').checked) {
+       cleanInterval(interval);
+    }
     fetch(url)
       .then(function(response) {
         return response.json();
       })
       .then(function(myJson) {
-        update(myJson.color);
+        update(myJson[property]);
       });
-  }, 1000);
+  }, delay);
 }
+
+
+function start()
+{
+  let wsUrl = document.getElementById('wsUrl').value;
+  let useWebsockets = ("WebSocket" in window) && document.getElementById('useWs').checked;
+  let property = document.getElementById('property').value;
+
+  if (useWebsockets) {
+    ws = new WebSocket(wsUrl);
+    ws.onclose = function (evt) {
+      /// CLOSE_ABNORMAL
+      if (evt.code === 1006) {
+        poll();
+      }
+    }
+    ws.onmessage = function (evt) {
+      if (!document.getElementById('pause').checked) {
+        ws.close();
+      }
+      update(JSON.parse(evt.data).data[property]);
+    }
+  } else {
+    if (ws) ws.close();
+    poll();
+  }
+}
+
+
+function toggle(status)
+{
+  document.getElementById('pause').checked = status;
+  if (status) {
+    start();
+  } else {
+    if (ws) {
+      ws.close();
+      ws = null;
+    }
+    if (interval) {
+      clearInterval(interval);
+    }
+  }
+}
+
+update('#C0C0C0');
+start(document.getElementById('pause'));
+
 // -->
     </script>
 </html>
