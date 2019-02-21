@@ -10,18 +10,33 @@ Copyright 2019-present Samsung Electronics France SAS, and other contributors
   </body>
     <script type="text/javascript"><!--
 let url = 'http://localhost:8888/properties/color';
-document.body.style.background = '#C0C0C0';
-setInterval(function(){
-  fetch(url)
-    .then(function(response) {
-      return response.json();
-    })
-    .then(function(myJson) {
-      console.log(JSON.stringify(myJson));
-      document.title = myJson.color;
-      document.body.style.background = myJson.color;
-    });
-}, 1000);
+let wsUrl = 'ws://localhost:8888';
+
+function update(color)
+{
+  console.log(color);
+  document.title = color;
+  document.body.style.background = color;
+}
+
+update('#C0C0C0');
+
+if ("WebSocket" in window) {
+  var ws = new WebSocket(wsUrl);
+  ws.onmessage = function (evt) {
+    update(JSON.parse(evt.data).data.color);
+  }
+} else {
+  setInterval(function(){
+    fetch(url)
+      .then(function(response) {
+        return response.json();
+      })
+      .then(function(myJson) {
+        update(myJson.color);
+      });
+  }, 1000);
+}
 // -->
     </script>
 </html>
