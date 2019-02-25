@@ -1,0 +1,10 @@
+# -*- coding: utf-8 -*-
+# SPDX-License-Identifier: Apache-2.0
+# Copyright: 2018-present Samsung Electronics France SAS, and other contributors
+
+version: "2"
+
+services:
+  default:
+    build: .
+    command: start
