@@ -20,7 +20,7 @@ and also provide a simulator that return random colors.
 
 Node.js and IoT.js runtimes are supported.
 
-Usage is straightforward
+Usage is straightforward.
 
 ```sh
 npm install
@@ -47,6 +47,20 @@ Lower level use is also possible:
 node lib/tcs34725.js 
 log: value=[17824,31876,49742,65535]
 ```
+
+On issues make sure that your system have I2C,
+device should be visible by user before using it:
+
+```sh
+sudo apt-get install i2c-tools make git
+i2cdetect -y 1
+#|      0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
+#| (...)
+#| 20: -- -- -- -- -- -- -- -- -- 29 -- -- -- -- -- --
+#| (...)
+```
+On Raspbian, pi "user" is in "i2c" group of file "/dev/i2c-1"
+(matching RaspberryPi's header).
 
 
 ## WEBTHING EXAMPLE: ##
@@ -101,4 +115,4 @@ but it can work with any regular material.
 * https://fosdem.org/2019/schedule/event/project_things/
 * https://api.npms.io/v2/package/color-sensor-js
 * https://npm.runkit.com/color-sensor-js
-
+* https://github.com/pando-project/iotjs-modules/pull/17
