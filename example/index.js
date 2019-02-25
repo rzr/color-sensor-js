@@ -38,6 +38,7 @@ var ColorSensor = function (options) {
   this.options = options || {}
   this.options.frequency = this.options.frequency || 1
   this.options.controller = this.options.controller || 'simulator'
+  this.options.controller = this.options.controller.charAt(0).toUpperCase() + this.options.controller.slice(1)
   try {
     this.sensor = new SensorController[this.options.controller]()
   } catch (err) {
