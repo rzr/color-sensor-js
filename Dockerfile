@@ -19,5 +19,5 @@ RUN echo "#log: ${project}: Preparing sources" \
 
 EXPOSE 8888
 WORKDIR /usr/local/${project}/${project}
-ENTRYPOINT [ "/usr/bin/make" ]
+ENTRYPOINT [ "/usr/bin/env", "npm" ]
 CMD [ "start" ]
