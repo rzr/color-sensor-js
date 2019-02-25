@@ -33,10 +33,15 @@ sudo i2cdetect -y 1 # (On raspberryPi)
 Usage is straightforward.
 
 ```sh
-npm install
+# git clone or use install released package:
+
+npm install sensor-color-js
+cd node_modules/sensor-color-js
+
+npm install --only=prod
 npm start
-{"color": "#badc0d"}
-{"color": "#c0ffee"}
+#| {"color": "#badc0d"}
+#| {"color": "#c0ffee"}
 ```
 
 By default simulator is used, if you want to run example using I2C TCS34725 sensor.
@@ -48,6 +53,8 @@ node example tcs34725
 Using IoT.js:
 
 ```sh
+git clone --recursive --depth 1 https://github.com/samsunginternet/color-sensor-js
+cd color-sensor-js
 iotjs example/index.js tcs34725
 ```
 
