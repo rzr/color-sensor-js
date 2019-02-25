@@ -1,6 +1,6 @@
 # COLOR-SENSOR-JS #
 
-[![GitHub forks](https://img.shields.io/github/forks/rzr/color-sensor-js.svg?style=social&label=Fork&maxAge=2592000)](https://GitHub.com/rzr/color-sensor-js/network/)
+[![GitHub forks](https://img.shields.io/github/forks/samsunginternet/color-sensor-js.svg?style=social&label=Fork&maxAge=2592000)](https://GitHub.com/samsunginternet/color-sensor-js/network/)
 [![license](https://img.shields.io/badge/license-Apache-2.0.svg)](LICENSE)
 [![NPM](https://img.shields.io/npm/v/color-sensor-js.svg)](https://www.npmjs.com/package/color-sensor-js)
 [![IRC Channel](https://img.shields.io/badge/chat-on%20freenode-brightgreen.svg)](https://kiwiirc.com/client/irc.freenode.net/#tizen)
