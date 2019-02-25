@@ -8,7 +8,7 @@
 default: all
 
 tmp_dir ?= tmp
-runtime ?= node
+runtime ?= iotjs
 export runtime
 eslint ?= node_modules/eslint/bin/eslint.js
 srcs_dir ?= lib example
@@ -70,6 +70,9 @@ distclean: cleanall
 test/npm: package.json
 	npm test
 
+test/${runtime}: ${main_src}
+	${@D} $<
+
 test: test/${runtime}
 
 start: run
@@ -117,6 +120,12 @@ lint/%: eslint
 lint: lint/${runtime}
 	echo "$@: $^"
 
-iotjs/run: lib/simulator.js example/index.js
+run/iotjs: lib/simulator.js example/index.js
 	iotjs $<
 	iotjs example/index.js
+
+setup/iotjs: ${iotjs_modules_dir}
+	@echo "Expected to see IoT.js' help"
+	${@F} --help ||:
+	ls $<
+
