@@ -20,7 +20,17 @@ and also provide a simulator that return random colors.
 
 Node.js and IoT.js runtimes are supported.
 
-Usage is straightforward
+On a system that support I2C, device should be visible before using it:
+
+```sh
+sudo i2cdetect -y 1 # (On raspberryPi)
+#|      0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
+#| (...)
+#| 20: -- -- -- -- -- -- -- -- -- 29 -- -- -- -- -- --
+#| (...)
+```
+
+Usage is straightforward.
 
 ```sh
 npm install
