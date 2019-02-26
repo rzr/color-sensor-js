@@ -22,38 +22,69 @@ Node.js and IoT.js runtimes are supported.
 
 Usage is straightforward.
 
-```sh
-# git clone or use install released package:
+By default simulator is used, and output are in web hex format (#RrGgBb),
+but lower level use is also possible.
 
-npm install sensor-color-js
-cd node_modules/sensor-color-js
+For using I2C TCS34725 sensor, check i2c chapter first.
 
-npm install --only=prod
-npm start
-#| {"color": "#badc0d"}
-#| {"color": "#c0ffee"}
-```
 
-By default simulator is used, if you want to run example using I2C TCS34725 sensor.
-
-```sh
-node example tcs34725
-```
+### USING IOT.JS: ###
 
 Using IoT.js:
 
 ```sh
 git clone --recursive --depth 1 https://github.com/samsunginternet/color-sensor-js
 cd color-sensor-js
-iotjs example/index.js tcs34725
+
+make test
+#| iotjs lib/simulator.js
+#| log: value=[7779,36778,11173,42766]
+#| log: test: test/iotjs
+
+make run
+#| {"color": "#badc0d"}
+#| {"color": "#c0ffee"}
+#| (...)
+
+# Or to use actual sensor:
+iotjs example tcs34725
+#| {"color": "#ff514a"}
+#| (...)
+
+# Raw driver values:
+iotjs lib/tcs34725.js 
+log: value=[65535,20885,19074,65535]
+
 ```
 
-Lower level use is also possible:
+
+### USING NODE.JS: ###
 
 ```sh
+# git clone or use install released package:
+
+npm install color-sensor-js
+cd node_modules/color-sensor-js
+
+npm install --only=prod
+npm test
+#| > node lib/simulator
+#| log: value=[11409,49339,1907,5849]
+
+npm start
+#| node example
+#| {"color": "#c0ffee"}
+#| (...)
+
+node example tcs34725
+#| {"color": "#ff514a"}
+#| (...)
+
 node lib/tcs34725.js 
-log: value=[17824,31876,49742,65535]
+#| log: value=[65535,20908,19103,65535]
 ```
+
+### NOTES: ###
 
 On issues make sure that your system have I2C,
 device should be visible by user before using it:
