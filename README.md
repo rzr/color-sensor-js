@@ -118,4 +118,4 @@ but it can work with any regular material.
 * https://fosdem.org/2019/schedule/event/project_things/
 * https://api.npms.io/v2/package/color-sensor-js
 * https://npm.runkit.com/color-sensor-js
-
+* https://github.com/pando-project/iotjs-modules/pull/17
