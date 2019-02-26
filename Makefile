@@ -128,3 +128,8 @@ setup/iotjs: ${iotjs_modules_dir}
 	${@F} --help ||:
 	ls $<
 
+rule/npm/version/%:
+	-git describe --tags
+	cd example/color-sensor-webthing && npm version ${@F}
+	-git commit -sam "webthing: Update version to ${@F}"
+	npm version ${@F}
