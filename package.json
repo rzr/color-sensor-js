@@ -7,7 +7,7 @@
     "example": "example",
     "lib": "lib"
   },
-  "dependencies": {
+  "optionalDependencies": {
     "i2c": "^0.2.3"
   },
   "devDependencies": {
