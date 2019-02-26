@@ -15,6 +15,10 @@ and also provide a simulator that return random colors.
 
 [![Presentation](https://cf.mastohost.com/v1/AUTH_91eb37814936490c95da7b85993cc2ff/socialsamsunginternet/preview_cards/images/000/004/182/original/863b031e1ab0e255.jpeg)](https://social.samsunginter.net/@rzr/101564201618024415# "WebThingIotJs")
 
+It should work with Adafruit RGB Color Sensor with IR Filter and White LED - TCS34725 [ADA1334] :
+
+* https://www.amazon.com/Adafruit-Color-Sensor-Filter-White/dp/B00OKCRU5M/ref=rzr-21#
+
 
 ## USAGE: ##
 
@@ -30,7 +34,9 @@ For using I2C TCS34725 sensor, check i2c chapter first.
 
 ### USING IOT.JS: ###
 
-Using IoT.js:
+Install recent version of IoT.js
+
+* https://github.com/rzr/webthing-iotjs/wiki/IotJs
 
 ```sh
 git clone --recursive --depth 1 https://github.com/samsunginternet/color-sensor-js
@@ -51,9 +57,9 @@ iotjs example tcs34725
 #| {"color": "#ff514a"}
 #| (...)
 
-# Raw driver values:
+# Raw driver's values:
 iotjs lib/tcs34725.js 
-log: value=[65535,20885,19074,65535]
+#| log: value=[65535,20885,19074,65535]
 
 ```
 
@@ -76,10 +82,12 @@ npm start
 #| {"color": "#c0ffee"}
 #| (...)
 
+# Or to use actual sensor:
 node example tcs34725
 #| {"color": "#ff514a"}
 #| (...)
 
+# Raw driver's values:
 node lib/tcs34725.js 
 #| log: value=[65535,20908,19103,65535]
 ```
@@ -114,7 +122,7 @@ npm install
 npm start
 
 curl http://localhost:8888/properties/color
-{"color":"#6ab302"}
+#| {"color":"#6ab302"}
 ```
 
 TCS34725 sensor can be selected from command line, and port eventually changed:
@@ -154,3 +162,4 @@ but it can work with any regular material.
 * https://api.npms.io/v2/package/color-sensor-js
 * https://npm.runkit.com/color-sensor-js
 * https://github.com/pando-project/iotjs-modules/pull/17
+* https://github.com/w3c/ambient-light/issues/9
