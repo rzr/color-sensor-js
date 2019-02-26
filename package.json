@@ -39,15 +39,19 @@
     "colorsensor",
     "color-sensor",
     "generic",
+    "generic-sensor",
     "i2c",
     "colour",
     "iotjs",
     "iotjs-module",
     "iotjs-supported",
+    "moziot",
     "rgb",
+    "sensor",
+    "sensors",
     "TCS34725",
-    "tcs34725",
     "tcs3472X",
-    "w3c"
+    "w3c",
+    "webthing"
   ]
 }
