@@ -24,7 +24,7 @@ try {
   ColorSensor = require('color-sensor-js/example')
 }
 
-function main () {
+function App () {
   var that = this
   this.port = process.argv[2] ? Number(process.argv[2]) : 8888
   this.controller = process.argv[3] ? String(process.argv[3]) : 'simulator'
@@ -56,5 +56,5 @@ function main () {
 }
 
 if (module.parent === null) {
-  main()
+  App()
 }
