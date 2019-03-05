@@ -23,12 +23,16 @@ default: help
 runtime?=iotjs
 top_dir?=../..
 base_url?=http://localhost:8888
-webthing_url?=https://github.com/rzr/webthing-iotjs
+
 run_args?=
 
 iotjs_modules_dir?=${CURDIR}/iotjs_modules
-iotjs_modules_dirs+=${iotjs_modules_dir}/webthing
 
+webthing-iotjs_url?=https://github.com/rzr/webthing-iotjs
+webthing-iotjs_revision?=webthing-iotjs-0.11.0
+# TODO : use webthing-iotjs
+webthing-iotjs_dir?=${iotjs_modules_dir}/webthing-iotjs
+iotjs_modules_dirs+=${webthing-iotjs_dir}
 
 
 help:
@@ -52,10 +56,10 @@ test:
 	@echo
 	curl ${base_url}/properties
 
-${iotjs_modules_dir}/webthing:
-	git clone --recursive --depth 1 ${webthing_url} $@
+${webthing-iotjs_dir}: Makefile
+	git clone --recursive --depth 1 ${webthing-iotjs_url} -b ${webthing-iotjs_revision} $@
 	make -C $@ deploy deploy_modules_dir=${iotjs_modules_dir}
 
-iotjs/start: index.js ${iotjs_modules_dir}/webthing
+iotjs/start: index.js ${iotjs_modules_dirs}
 	IOTJS_EXTRA_MODULES_PATH=../..  iotjs $< ${run_args}
 

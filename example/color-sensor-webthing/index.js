@@ -15,9 +15,14 @@
  * limitations under the License.
  */
 
-var webthing = require('webthing')
+var webthing = require('webthing-iotjs')
 // HAL
-var ColorSensor = require('../index.js')
+var ColorSensor = null
+try {
+  ColorSensor = require('../color-sensor-webthing/../index.js')
+} catch (err) {
+  ColorSensor = require('color-sensor-js/example')
+}
 
 function main () {
   var that = this
