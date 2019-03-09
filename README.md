@@ -137,8 +137,15 @@ May I recommend to give a try with IoT.js runtime,
 it is faster and consuming much less resources:
 
 ```sh
-make -C example/color-sensor-webthing iotjs/run
+make -C example/color-sensor-webthing start
 ```
+
+Then open example page:
+
+* http://samsunginter.net/color-sensor-js/
+
+Background should be updated in realtime.
+
 
 [![schemas](http://image.slidesharecdn.com/iot-javascript-2019-fosdem-190206130525/95/iotjavascript2019fosdem-26-638.jpg)](https://www.slideshare.net/rzrfreefr/iotjavascript2019fosdem/26 "Schema")
 
@@ -153,6 +160,8 @@ but it can work with any regular material.
 
 ## RESOURCES: ##
 
+* https://libraries.io/npm/color-sensor-js
+* https://hacks.mozilla.org/2019/03/connecting-real-things-to-virtual-worlds-using-web/
 * https://social.samsunginter.net/@rzr/101564201618024415
 * https://ams.com/documents/20143/36005/TCS3472_DS000390_2-00.pdf
 * https://www.broadcom.com/products/optical-sensors/integrated-ambient-light-and-proximity-sensors/apds-9960
