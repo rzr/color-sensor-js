@@ -1,8 +1,9 @@
+<!DOCTYPE html>
+<!-- SPDX-License-Identifier: Apache-2.0 -->
 <!-- 
-SPDX-License-Identifier: Apache-2.0
-Copyright 2019-present Samsung Electronics France SAS, and other contributors
--->
-<html>
+     Copyright 2019-present Samsung Electronics France SAS, and other contributors
+  -->
+<html lang="en">
   <head>
     <meta charset="utf-8"/>
   </head>
@@ -48,7 +49,7 @@ function poll(delay)
   }
   interval = setInterval(function(){
     if (!document.getElementById('pause').checked) {
-       cleanInterval(interval);
+       clearInterval(interval);
     }
     fetch(url)
       .then(function(response) {
