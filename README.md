@@ -34,7 +34,7 @@ For using I2C TCS34725 sensor, check i2c chapter first.
 
 ### USING IOT.JS: ###
 
-Install recent version of IoT.js
+Install recent version of IoT.js:
 
 * https://github.com/rzr/webthing-iotjs/wiki/IotJs
 
@@ -140,14 +140,25 @@ it is faster and consuming much less resources:
 make -C example/color-sensor-webthing start
 ```
 
-Then open example page:
+[![schemas](http://image.slidesharecdn.com/iot-javascript-2019-fosdem-190206130525/95/iotjavascript2019fosdem-26-638.jpg)](https://www.slideshare.net/rzrfreefr/iotjavascript2019fosdem/26 "Schema")
+
+
+### CLIENTS: ###
+
+Webthings servers are designed to be connected Mozilla's IoT which play the client role,
+but nothing prevent to create your own, in CLI (using IoT.js or Node.js) or browser.
+
+For web app clients try to open this page, some are listed:
 
 * http://samsunginter.net/color-sensor-js/
+* HTML one: Background should be updated in realtime
+* A-Frame one: will also display update in 3D in browser or VR/AR headset
 
-Background should be updated in realtime.
+Note, if you want to create your app offline you can use static contents:
 
+* http://samsunginter.net/color-sensor-js/color-sensor-webthing/extra/json/
 
-[![schemas](http://image.slidesharecdn.com/iot-javascript-2019-fosdem-190206130525/95/iotjavascript2019fosdem-26-638.jpg)](https://www.slideshare.net/rzrfreefr/iotjavascript2019fosdem/26 "Schema")
+Off course, prefix path (and suffix if loading from file:) should be adjusted.
 
 
 ## DEMO: ##
@@ -163,6 +174,7 @@ but it can work with any regular material.
 * https://libraries.io/npm/color-sensor-js
 * https://hacks.mozilla.org/2019/03/connecting-real-things-to-virtual-worlds-using-web/
 * https://social.samsunginter.net/@rzr/101564201618024415
+* https://ams.com/tcs34725
 * https://ams.com/documents/20143/36005/TCS3472_DS000390_2-00.pdf
 * https://www.broadcom.com/products/optical-sensors/integrated-ambient-light-and-proximity-sensors/apds-9960
 * https://github.com/rzr/webthing-iotjs/wiki/Sensor
@@ -172,3 +184,4 @@ but it can work with any regular material.
 * https://npm.runkit.com/color-sensor-js
 * https://github.com/pando-project/iotjs-modules/pull/17
 * https://github.com/w3c/ambient-light/issues/9
+* https://www.laval-virtual.com/schedule-2019/
