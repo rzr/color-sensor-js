@@ -21,6 +21,7 @@ var app = {
   pause: false,
   property: 'color',
   url: 'http://localhost:8888',
+  suffix: '',
   useWs: false,
   wsUrl: 'ws://localhost:8888',
 }
@@ -50,7 +51,7 @@ function poll(delay)
   interval = setInterval(() => {
     verbose(`log: loop: waiting delay: ${delay}`);
     var property = app.property;
-    var url = `${app.url}/properties/${property}` ;
+    var url = `${app.url}/properties/${property}${app.suffix}`;
     verbose(`log: fetch: ${url}`);
     if (app.pause) {
        verbose(`log: stopping: ${app.pause}`);
@@ -60,7 +61,12 @@ function poll(delay)
       .then((response) => {
         return response.json();
       }, (reason) => {
-        console.error(reason);
+        verbose(reason);
+        app.url = String(window.location).substring(0,
+          String(window.location).lastIndexOf("/"))
+          + '/json';
+        app.suffix = '/index.html';
+        verbose(`log: Fallback to static: ${app.url}`);
       })
       .then((json) => {
         verbose(`log: payload: ${JSON.stringify(json)}`);
