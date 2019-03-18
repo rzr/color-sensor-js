@@ -22,7 +22,8 @@ default: help
 
 runtime?=iotjs
 top_dir?=../..
-base_url?=http://localhost:8888
+port?=8888
+base_url?=http://localhost:${port}
 
 run_args?=
 
@@ -63,3 +64,9 @@ ${webthing-iotjs_dir}: Makefile
 iotjs/start: index.js ${iotjs_modules_dirs}
 	IOTJS_EXTRA_MODULES_PATH=../..  iotjs $< ${run_args}
 
+json_file?=index.html
+extra/json: Makefile
+	mkdir -p $@/properties/color
+	curl ${base_url}/properties/color  | jq -M .  > $@/properties/color/${json_file}
+	curl ${base_url}/properties  | jq -M .  > $@/properties/${json_file}
+	curl ${base_url}/  | jq -M .  > $@/${json_file}
