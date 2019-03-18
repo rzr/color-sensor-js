@@ -16,7 +16,7 @@
              ></a-box>
     </a-scene>
   </body>
-    <script type="text/javascript"><!--
+<script type="text/javascript">
 var app = {
   pause: false,
   property: 'color',
@@ -24,7 +24,7 @@ var app = {
   suffix: '',
   useWs: false,
   wsUrl: 'ws://localhost:8888',
-}
+};
 
 let interval = null;
 let ws = null;
@@ -32,7 +32,7 @@ let ws = null;
 
 function verbose(arg)
 {
-   console.log(arg);
+  console.log(arg);
 }
 
 function update(value)
@@ -54,16 +54,16 @@ function poll(delay)
     var url = `${app.url}/properties/${property}${app.suffix}`;
     verbose(`log: fetch: ${url}`);
     if (app.pause) {
-       verbose(`log: stopping: ${app.pause}`);
-       inverval = clearInterval(interval);
+      verbose(`log: stopping: ${app.pause}`);
+      inverval = clearInterval(interval);
     }
     fetch(url)
       .then((response) => {
         return response.json();
       }, (reason) => {
         verbose(reason);
-        app.url = String(window.location).substring(0,
-          String(window.location).lastIndexOf("/"))
+        app.url = String(window.location)
+          .substring(0, String(window.location).lastIndexOf("/"))
           + '/json';
         app.suffix = '/index.html';
         verbose(`log: Fallback to static: ${app.url}`);
@@ -124,7 +124,5 @@ setTimeout(function() {
   start();
 }, 1000);
 
-
-// -->
     </script>
 </html>
