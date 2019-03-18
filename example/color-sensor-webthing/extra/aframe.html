@@ -82,6 +82,15 @@ function start()
   let useWebsockets = ("WebSocket" in window) && app.useWsl
   let property = document.getElementById(app.property).value;
 
+  let searchParams = null;
+  if (document.location.search) {
+    searchParams = (new URL(document.location)).searchParams;
+  }
+  if (searchParams) {
+    for (var entry of searchParams.entries())
+      app[entry[0]] = entry[1];
+  }
+
   if (useWebsockets) {
     ws = new WebSocket(wsUrl);
     ws.onclose = function (evt) {
