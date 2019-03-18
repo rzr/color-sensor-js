@@ -1,0 +1,27 @@
+{
+  "name": "ColorSensor",
+  "href": "/",
+  "@context": "https://iot.mozilla.org/schemas",
+  "@type": [
+    "ColorControl"
+  ],
+  "properties": {
+    "color": {
+      "@type": "ColorProperty",
+      "readOnly": true,
+      "type": "string",
+      "links": [
+        {
+          "rel": "property",
+          "href": "/properties/color"
+        }
+      ]
+    }
+  },
+  "links": [
+    {
+      "rel": "properties",
+      "href": "/properties"
+    }
+  ]
+}
