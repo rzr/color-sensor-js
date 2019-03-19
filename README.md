@@ -158,7 +158,11 @@ Note, if you want to create your app offline you can use static contents:
 
 * http://samsunginter.net/color-sensor-js/color-sensor-webthing/extra/json/
 
-Off course, prefix path (and suffix if loading from file:) should be adjusted.
+Off course, prefix path (and suffix if loading from file:) should be adjusted, or overloaded using CGI params.
+
+You can even run webthings in the cloud:
+
+* http://samsunginter.net/color-sensor-js/example/color-sensor-webthing/extra/aframe.html?&url=https://color-sensor-webthing.glitch.me
 
 
 ## DEMO: ##
