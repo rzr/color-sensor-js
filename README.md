@@ -13,7 +13,8 @@
 This module is supporting TCS34725 I2C sensor
 and also provide a simulator that return random colors.
 
-[![Presentation](https://cf.mastohost.com/v1/AUTH_91eb37814936490c95da7b85993cc2ff/socialsamsunginternet/preview_cards/images/000/004/182/original/863b031e1ab0e255.jpeg)](https://social.samsunginter.net/@rzr/101564201618024415# "WebThingIotJs")
+[![Presentation](https://camo.githubusercontent.com/a31c09f76b5309cc7fbf0122a271913a5c9d91a3/68747470733a2f2f696d6167652e736c696465736861726563646e2e636f6d2f776f7478722d3230313930333230727a722d3139303332313133333434362f39352f776f7478723230313930333230727a722d312d3633382e6a7067#wotxr-20190320rzr#)](http://www.slideshare.net/slideshow/embed_code/key/cPtJI8DNhzpE4#wotxr-20190320rzr# "WoTxR")
+
 
 It should work with Adafruit RGB Color Sensor with IR Filter and White LED - TCS34725 [ADA1334] :
 
@@ -165,12 +166,16 @@ You can even run webthings in the cloud:
 * http://samsunginter.net/color-sensor-js/example/color-sensor-webthing/extra/aframe.html?&url=https://color-sensor-webthing.glitch.me
 
 
-## DEMO: ##
+## DEMOS: ##
 
 [![demo](https://image.slidesharecdn.com/mozilla-things-fosdem-2019-190207162845/95/mozillathingsfosdem2019-24-638.jpg)](https://www.slideshare.net/rzrfreefr/mozillathingsfosdem2019/25 "Demo")
 
 In "webthing-iotjs-opendata-20190202rzr" video, sensor is observing the lamp color,
 but it can work with any regular material.
+
+[![Presentation](https://cf.mastohost.com/v1/AUTH_91eb37814936490c95da7b85993cc2ff/socialsamsunginternet/preview_cards/images/000/004/182/original/863b031e1ab0e255.jpeg)](https://social.samsunginter.net/@rzr/101564201618024415# "WebThingIotJs")
+
+A-Frame can also been used for rendering.
 
 
 ## RESOURCES: ##
