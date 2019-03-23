@@ -31,7 +31,6 @@ iotjs_modules_dir?=${CURDIR}/iotjs_modules
 
 webthing-iotjs_url?=https://github.com/rzr/webthing-iotjs
 webthing-iotjs_revision?=webthing-iotjs-0.11.0
-# TODO : use webthing-iotjs
 webthing-iotjs_dir?=${iotjs_modules_dir}/webthing-iotjs
 iotjs_modules_dirs+=${webthing-iotjs_dir}
 
@@ -43,6 +42,11 @@ help:
 node_modules: package.json
 	npm install
 
+node/modules: node_modules
+	ls $<
+
+modules: ${runtime}/modules
+	@echo "# $@: $^"
 node/start: node_modules
 	npm start
 
@@ -62,7 +66,14 @@ ${webthing-iotjs_dir}: Makefile
 	make -C $@ deploy deploy_modules_dir=${iotjs_modules_dir}
 
 iotjs/start: index.js ${iotjs_modules_dirs}
-	IOTJS_EXTRA_MODULES_PATH=../..  iotjs $< ${run_args}
+	iotjs $< ${run_args}
+
+iotjs/devel : index.js ${iotjs_modules_dirs}
+	IOTJS_EXTRA_MODULES_PATH=${topdir} \
+	iotjs $< ${run_args}
+
+iotjs/modules: ${iotjs_modules_dirs}
+	ls $<
 
 json_file?=index.html
 extra/json: Makefile
