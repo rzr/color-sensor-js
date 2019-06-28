@@ -5,7 +5,8 @@
 # Copyright 2019-present Samsung Electronics France SAS, and other contributors
 #}
 
-default: all
+default: help all
+	@echo "log: $@: $^"
 
 tmp_dir ?= tmp
 runtime ?= iotjs
@@ -23,9 +24,11 @@ export NODE_PATH
 
 help:
 	@echo "## Usage: "
-	@echo "# make retranspile"
+	@echo "# make start"
+	@echo "# make -C example/color-sensor-webthing start"
 
 all: build
+	@echo "log: $@: $^"
 
 setup/%:
 	${@F}
