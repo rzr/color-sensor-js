@@ -19,6 +19,7 @@ and also provide a simulator that return random colors.
 It should work with Adafruit RGB Color Sensor with IR Filter and White LED - TCS34725 [ADA1334] :
 
 * https://www.amazon.com/Adafruit-Color-Sensor-Filter-White/dp/B00OKCRU5M/ref=rzr-21#
+* https://www.adafruit.com/product/1334
 
 
 ## USAGE: ##
@@ -157,7 +158,7 @@ For web app clients try to open this page, some are listed:
 
 Note, if you want to create your app offline you can use static contents:
 
-* http://samsunginter.net/color-sensor-js/color-sensor-webthing/extra/json/
+* http://samsunginter.net/color-sensor-js/example/color-sensor-webthing/extra/json/
 
 Off course, prefix path (and suffix if loading from file:) should be adjusted, or overloaded using CGI params.
 
@@ -188,9 +189,13 @@ A-Frame can also been used for rendering.
 * https://www.broadcom.com/products/optical-sensors/integrated-ambient-light-and-proximity-sensors/apds-9960
 * https://github.com/rzr/webthing-iotjs/wiki/Sensor
 * https://github.com/rzr/generic-sensors-lite
+* https://github.com/rzr/mozilla-iot-generic-sensors-adapter/
 * https://fosdem.org/2019/schedule/event/project_things/
 * https://api.npms.io/v2/package/color-sensor-js
 * https://npm.runkit.com/color-sensor-js
 * https://github.com/pando-project/iotjs-modules/pull/17
 * https://github.com/w3c/ambient-light/issues/9
 * https://www.laval-virtual.com/schedule-2019/
+* https://en.wikipedia.org/wiki/Colorimetry
+* https://github.com/kelly/node-i2c/issues/90
+
