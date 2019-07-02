@@ -1,6 +1,6 @@
 {
   "name": "color-sensor-js",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Color sensors kit supporting TCS34725 (I2C) or simulator",
   "main": "index.js",
   "directories": {
