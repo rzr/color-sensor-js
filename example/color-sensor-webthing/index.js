@@ -50,6 +50,7 @@ function App () {
       that.server.stop()
       process.exit()
     })
+    console.log('log: Listening on: http://localhost:' + that.port)
     that.server.start()
   }
   this.sensor.start()
