@@ -8,7 +8,7 @@
     "lib": "lib"
   },
   "optionalDependencies": {
-    "i2c": "^0.2.3"
+    "@abandonware/i2c": "^0.2.4-0"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.2",
