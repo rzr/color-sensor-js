@@ -1,19 +1,31 @@
 <!DOCTYPE html>
 <!-- SPDX-License-Identifier: Apache-2.0 -->
-<!-- 
+<!--
      Copyright 2019-present Samsung Electronics France SAS, and other contributors
   -->
 <html lang="en">
   <head>
     <meta charset="utf-8"/>
     <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
-    <title>TODO: replace URL to running instance (eg: localhost:8888)</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/rzr/aframe-webthing@v0.0.1/src/aframe-webthing.js"></script>
+    <script  type="text/javascript"
+AFRAME.registerComponent('properties', {
+  schema: {
+    color: { type: 'string', default: '#808080'},
+  },
+
+ update: function(old) {
+    this.el.setAttribute('color', this.data['color']);
+  }
+});
+</script>
   </head>
   <body>
     <a-scene>
       <a-sphere id="color"
                 color="#FF0000"
                 position="0 0 -5"
+                webthing properties
                 ></a-sphere>
       <a-cylinder id="base" color="#777"
                   position="0 -1 -5"
@@ -21,122 +33,4 @@
                   ></a-cylinder>
     </a-scene>
   </body>
-<script type="text/javascript">
-var app = {
-  pause: false,
-  property: 'color',
-  url: 'http://localhost:8888',
-  suffix: '',
-  useWs: false,
-  wsUrl: 'ws://localhost:8888',
-};
-
-let interval = null;
-let ws = null;
-
-
-function verbose(arg)
-{
-  console.log(arg);
-}
-
-function update(value)
-{
-  verbose(`log: update: ${value}`);
-  document.title = value;
-  document.getElementById(app.property).setAttribute(app.property, value);
-}
-
-
-function poll(delay)
-{
-  if (!delay) {
-    delay = 1000;
-  }
-  interval = setInterval(() => {
-    verbose(`log: loop: waiting delay: ${delay}`);
-    var property = app.property;
-    var url = `${app.url}/properties/${property}${app.suffix}`;
-    verbose(`log: fetch: ${url}`);
-    if (app.pause) {
-      verbose(`log: stopping: ${app.pause}`);
-      inverval = clearInterval(interval);
-    }
-    fetch(url)
-      .then((response) => {
-        return response.json();
-      }, (reason) => {
-        verbose(reason);
-        app.url = String(window.location)
-          .substring(0, String(window.location).lastIndexOf("/"))
-          + '/json';
-        app.suffix = '/index.html';
-        verbose(`log: Fallback to static: ${app.url}`);
-      })
-      .then((json) => {
-        verbose(`log: payload: ${JSON.stringify(json)}`);
-        update(json[property]);
-      });
-  }, delay);
-}
-
-
-function start()
-{
-  let wsUrl = app.wsUrl.value;
-  let useWebsockets = ("WebSocket" in window) && app.useWsl
-  let property = document.getElementById(app.property).value;
-
-  let searchParams = null;
-  if (document.location.search) {
-    searchParams = (new URL(document.location)).searchParams;
-  }
-  if (searchParams) {
-    for (var entry of searchParams.entries())
-      app[entry[0]] = entry[1];
-  }
-
-  if (useWebsockets) {
-    ws = new WebSocket(wsUrl);
-    ws.onclose = function (evt) {
-      /// CLOSE_ABNORMAL
-      if (evt.code === 1006) {
-        poll();
-      }
-    }
-    ws.onmessage = function (evt) {
-      if (app.pause) {
-        ws.close();
-      }
-      update(JSON.parse(evt.data).data[property]);
-    }
-  } else {
-    if (ws) ws.close();
-    poll();
-  }
-}
-
-
-function toggle(status)
-{
-  app.pause = status;
-  if (status) {
-    start();
-  } else {
-    if (ws) {
-      ws.close();
-      ws = null;
-    }
-    if (interval) {
-      clearInterval(interval);
-    }
-  }
-}
-
-setTimeout(function() {
-  update('#00FF00');
-  start();
-}, 1000);
-
-    </script>
 </html>
