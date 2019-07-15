@@ -49,13 +49,14 @@ make test
 #| log: value=[7779,36778,11173,42766]
 #| log: test: test/iotjs
 
-make run
+make start
 #| {"color": "#badc0d"}
 #| {"color": "#c0ffee"}
 #| (...)
 
 # Or to use actual sensor:
-iotjs example tcs34725
+make start run_args=tcs34725
+#| iotjs example tcs34725
 #| {"color": "#ff514a"}
 #| (...)
 
@@ -165,6 +166,8 @@ Off course, prefix path (and suffix if loading from file:) should be adjusted, o
 You can even run webthings in the cloud:
 
 * http://samsunginter.net/color-sensor-js/example/color-sensor-webthing/extra/aframe.html?&url=https://color-sensor-webthing.glitch.me
+
+[![aframe-webthing](https://speakerd.s3.amazonaws.com/presentations/9d6091c2266448b88daab13082337882/slide_29.jpg#aframe-webthing)](http://purl.org/aframe-webthing# "aframe-webthing")
 
 
 ## DEMOS: ##
