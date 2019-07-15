@@ -12,7 +12,7 @@
     "webthing-iotjs": "^0.11.3-0"
   },
   "optionalDependencies": {
-    "i2c": "^0.2.3"
+    "@abandonware/i2c": "^0.2.4-0"
   },
   "repository": {
     "type": "git",
