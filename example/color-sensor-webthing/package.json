@@ -9,7 +9,7 @@
   "author": "Philippe Coval <p.coval@samsung.com> (https://www.npmjs.com/~rzr)",
   "license": "Apache-2.0",
   "dependencies": {
-    "webthing-iotjs": "^0.11.2-1"
+    "webthing-iotjs": "^0.11.3-0"
   },
   "optionalDependencies": {
     "i2c": "^0.2.3"
