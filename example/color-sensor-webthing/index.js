@@ -28,7 +28,8 @@ function App () {
   var that = this
   this.port = process.argv[2] ? Number(process.argv[2]) : 8888
   this.controller = process.argv[3] ? String(process.argv[3]) : 'simulator'
-  this.thing = new webthing.Thing('ColorSensor', ['ColorControl'])
+  this.thing = new webthing.Thing('urn:dev:opts:sensor-color-1234',
+                                  'ColorSensor', ['ColorControl'])
   this.value = new webthing.Value('#000000')
   this.thing.addProperty(new webthing.Property(
     this.thing, 'color', this.value,
