@@ -1,5 +1,6 @@
 # COLOR-SENSOR-JS #
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/9eaea080afea42e295b8778133446bbd)](https://app.codacy.com/app/rzr/color-sensor-js?utm_source=github.com&utm_medium=referral&utm_content=rzr/color-sensor-js&utm_campaign=Badge_Grade_Dashboard)
 [![GitHub forks](https://img.shields.io/github/forks/samsunginternet/color-sensor-js.svg?style=social&label=Fork&maxAge=2592000)](https://GitHub.com/samsunginternet/color-sensor-js/network/)
 [![license](https://img.shields.io/badge/license-Apache-2.0.svg)](LICENSE)
 [![NPM](https://img.shields.io/npm/v/color-sensor-js.svg)](https://www.npmjs.com/package/color-sensor-js)
