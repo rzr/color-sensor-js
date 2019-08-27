@@ -18,8 +18,8 @@ and also provide a simulator that return random colors.
 
 It should work with Adafruit RGB Color Sensor with IR Filter and White LED - TCS34725 [ADA1334] :
 
-* https://www.amazon.com/Adafruit-Color-Sensor-Filter-White/dp/B00OKCRU5M/ref=rzr-21#
-* https://www.adafruit.com/product/1334
+* <https://www.amazon.com/Adafruit-Color-Sensor-Filter-White/dp/B00OKCRU5M/ref=rzr-21#>
+* <https://www.adafruit.com/product/1334>
 
 
 ## USAGE: ##
@@ -38,7 +38,7 @@ For using I2C TCS34725 sensor, check i2c chapter first.
 
 Install recent version of IoT.js:
 
-* https://github.com/rzr/webthing-iotjs/wiki/IotJs
+* <https://github.com/rzr/webthing-iotjs/wiki/IotJs>
 
 ```sh
 git clone --recursive --depth 1 https://github.com/samsunginternet/color-sensor-js
@@ -153,19 +153,19 @@ but nothing prevent to create your own, in CLI (using IoT.js or Node.js) or brow
 
 For web app clients try to open this page, some are listed:
 
-* http://samsunginter.net/color-sensor-js/
+* <http://samsunginter.net/color-sensor-js/>
 * HTML one: Background should be updated in realtime
 * A-Frame one: will also display update in 3D in browser or VR/AR headset
 
 Note, if you want to create your app offline you can use static contents:
 
-* http://samsunginter.net/color-sensor-js/example/color-sensor-webthing/extra/json/
+* <http://samsunginter.net/color-sensor-js/example/color-sensor-webthing/extra/json/>
 
 Off course, prefix path (and suffix if loading from file:) should be adjusted, or overloaded using CGI params.
 
 You can even run webthings in the cloud:
 
-* http://samsunginter.net/color-sensor-js/example/color-sensor-webthing/extra/aframe.html?&url=https://color-sensor-webthing.glitch.me
+* <http://samsunginter.net/color-sensor-js/example/color-sensor-webthing/extra/aframe.html?&url=https://color-sensor-webthing.glitch.me>
 
 [![aframe-webthing](https://speakerd.s3.amazonaws.com/presentations/9d6091c2266448b88daab13082337882/slide_29.jpg#aframe-webthing)](http://purl.org/aframe-webthing# "aframe-webthing")
 
@@ -184,21 +184,21 @@ A-Frame can also been used for rendering.
 
 ## RESOURCES: ##
 
-* https://libraries.io/npm/color-sensor-js
-* https://hacks.mozilla.org/2019/03/connecting-real-things-to-virtual-worlds-using-web/
-* https://social.samsunginter.net/@rzr/101564201618024415
-* https://ams.com/tcs34725
-* https://ams.com/documents/20143/36005/TCS3472_DS000390_2-00.pdf
-* https://www.broadcom.com/products/optical-sensors/integrated-ambient-light-and-proximity-sensors/apds-9960
-* https://github.com/rzr/webthing-iotjs/wiki/Sensor
-* https://github.com/rzr/generic-sensors-lite
-* https://github.com/rzr/mozilla-iot-generic-sensors-adapter/
-* https://fosdem.org/2019/schedule/event/project_things/
-* https://api.npms.io/v2/package/color-sensor-js
-* https://npm.runkit.com/color-sensor-js
-* https://github.com/pando-project/iotjs-modules/pull/17
-* https://github.com/w3c/ambient-light/issues/9
-* https://www.laval-virtual.com/schedule-2019/
-* https://en.wikipedia.org/wiki/Colorimetry
-* https://github.com/kelly/node-i2c/issues/90
+* <https://libraries.io/npm/color-sensor-js>
+* <https://hacks.mozilla.org/2019/03/connecting-real-things-to-virtual-worlds-using-web/>
+* <https://social.samsunginter.net/@rzr/101564201618024415>
+* <https://ams.com/tcs34725>
+* <https://ams.com/documents/20143/36005/TCS3472_DS000390_2-00.pdf>
+* <https://www.broadcom.com/products/optical-sensors/integrated-ambient-light-and-proximity-sensors/apds-9960>
+* <https://github.com/rzr/webthing-iotjs/wiki/Sensor>
+* <https://github.com/rzr/generic-sensors-lite>
+* <https://github.com/rzr/mozilla-iot-generic-sensors-adapter/>
+* <https://fosdem.org/2019/schedule/event/project_things/>
+* <https://api.npms.io/v2/package/color-sensor-js>
+* <https://npm.runkit.com/color-sensor-js>
+* <https://github.com/pando-project/iotjs-modules/pull/17>
+* <https://github.com/w3c/ambient-light/issues/9>
+* <https://www.laval-virtual.com/schedule-2019/>
+* <https://en.wikipedia.org/wiki/Colorimetry>
+* <https://github.com/kelly/node-i2c/issues/90>
 
