@@ -4,6 +4,7 @@
 [![license](https://img.shields.io/badge/license-Apache-2.0.svg)](LICENSE)
 [![NPM](https://img.shields.io/npm/v/color-sensor-js.svg)](https://www.npmjs.com/package/color-sensor-js)
 [![IRC Channel](https://img.shields.io/badge/chat-on%20freenode-brightgreen.svg)](https://kiwiirc.com/client/irc.freenode.net/#tizen)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/9eaea080afea42e295b8778133446bbd)](https://app.codacy.com/app/rzr/color-sensor-js?utm_source=github.com&utm_medium=referral&utm_content=rzr/color-sensor-js&utm_campaign=Badge_Grade_Dashboard)
 
 [![NPM](https://nodei.co/npm/color-sensor-js.png)](https://npmjs.org/package/color-sensor-js)
 
