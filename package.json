@@ -26,12 +26,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/samsunginternet/color-sensor-js.git"
+    "url": "git+https://github.com/rzr/color-sensor-js.git"
   },
   "author": "Philippe Coval <p.coval@samsung.com> (https://www.npmjs.com/~rzr)",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/samsunginternet/color-sensor-js/issues"
+    "url": "https://github.com/rzr/color-sensor-js/issues"
   },
   "homepage": "https://libraries.io/npm/color-sensor-js",
   "keywords": [
