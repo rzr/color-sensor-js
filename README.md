@@ -196,9 +196,9 @@ A-Frame can also been used for rendering.
 * <https://fosdem.org/2019/schedule/event/project_things/>
 * <https://api.npms.io/v2/package/color-sensor-js>
 * <https://npm.runkit.com/color-sensor-js>
-* <https://github.com/pando-project/iotjs-modules/pull/17>
+* <https://github.com/jerryscript-project/iotjs-modules>
 * <https://github.com/w3c/ambient-light/issues/9>
-* <https://www.laval-virtual.com/schedule-2019/>
+* <https://www.af83.com/in-realtime/laval-virtual-2019>
 * <https://en.wikipedia.org/wiki/Colorimetry>
 * <https://github.com/kelly/node-i2c/issues/90>
-
+* <https://github.com/WiringPi/WiringPi-Node/blob/master/DOCUMENTATION.md#tcs34725>
