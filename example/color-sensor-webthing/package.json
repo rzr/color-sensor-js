@@ -9,7 +9,7 @@
   "author": "Philippe Coval <rzr@users.sf.net> (https://www.npmjs.com/~rzr)",
   "license": "Apache-2.0",
   "dependencies": {
-    "webthing-iotjs": "^0.12.1-1"
+    "webthing-iotjs": "^0.12.1-2"
   },
   "optionalDependencies": {
     "wiringpi-iotjs": "^0.0.5"
