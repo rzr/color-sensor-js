@@ -21,6 +21,11 @@ main_src ?= example/index.js
 NODE_PATH := .:${NODE_PATH}
 export NODE_PATH
 
+iotjs_modules_dir?=${CURDIR}/iotjs_modules
+
+wiringpi-iotjs_url ?= https://github.com/rzr/wiringpi-iotjs
+wiringpi-iotjs_revision ?= v0.0.5
+iotjs_modules_dirs += ${iotjs_modules_dir}/wiringpi-iotjs
 
 help:
 	@echo "## Usage: "
@@ -81,6 +86,14 @@ test/${runtime}: ${test_src}
 test: test/${runtime}
 	@echo "log: $@: $^"
 
+modules/${runtime}: ${iotjs_modules_dirs}
+
+modules: modules/${runtime}
+
+start/%: ${main_src} build modules
+	${@F} $< ${run_args}
+
+start: start/${runtime}
 start: run
 
 check/%: ${srcs}
@@ -126,7 +139,7 @@ lint/%: eslint
 lint: lint/${runtime}
 	echo "$@: $^"
 
-setup/iotjs: ${iotjs_modules_dir}
+setup/iotjs: ${iotjs_modules_dirs}
 	@echo "Expected to see IoT.js' help"
 	${@F} --help ||:
 	ls $<
@@ -138,3 +151,8 @@ rule/npm/version/%: package.json
 	-git commit -sam "webthing: Update version to ${@F}"
 	-npm version ${@F}
 	git commit -sam "npm: Update version to ${@F}"
+
+${iotjs_modules_dir}/%: Makefile
+	mkdir -p ${@D}
+	git clone --recursive --depth 1 ${${@F}_url} -b ${${@F}_revision} $@
+	-rm -rf ${@}/.git
