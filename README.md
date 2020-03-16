@@ -7,22 +7,24 @@
 
 [![NPM](https://nodei.co/npm/color-sensor-js.png)](https://npmjs.org/package/color-sensor-js)
 
-
 ## INTRODUCTION ##
 
 This module is supporting TCS34725 I2C sensor
 and also provide a simulator that return random colors.
 
-[![Presentation](https://camo.githubusercontent.com/a31c09f76b5309cc7fbf0122a271913a5c9d91a3/68747470733a2f2f696d6167652e736c696465736861726563646e2e636f6d2f776f7478722d3230313930333230727a722d3139303332313133333434362f39352f776f7478723230313930333230727a722d312d3633382e6a7067#wotxr-20190320rzr#)](http://www.slideshare.net/slideshow/embed_code/key/cPtJI8DNhzpE4#wotxr-20190320rzr# "WoTxR")
+[![Presentation](
+https://camo.githubusercontent.com/a31c09f76b5309cc7fbf0122a271913a5c9d91a3/68747470733a2f2f696d6167652e736c696465736861726563646e2e636f6d2f776f7478722d3230313930333230727a722d3139303332313133333434362f39352f776f7478723230313930333230727a722d312d3633382e6a7067#./file/wotxr-20190320rzr.jpg
+)](
+http://www.slideshare.net/slideshow/embed_code/key/cPtJI8DNhzpE4#wotxr-20190320rzr
+"WoTxR")
 
-
-It should work with Adafruit RGB Color Sensor with IR Filter and White LED - TCS34725 [ADA1334] :
+It should work with Adafruit RGB Color Sensor
+with IR Filter and White LED - TCS34725 [ADA1334] :
 
 * <https://www.amazon.com/Adafruit-Color-Sensor-Filter-White/dp/B00OKCRU5M/ref=rzr-21#>
 * <https://www.adafruit.com/product/1334>
 
-
-## USAGE: ##
+## USAGE ##
 
 Node.js and IoT.js runtimes are supported.
 
@@ -33,8 +35,7 @@ but lower level use is also possible.
 
 For using I2C TCS34725 sensor, check i2c chapter first.
 
-
-### USING IOT.JS: ###
+### USING IOT.JS ###
 
 Install recent version of IoT.js:
 
@@ -61,13 +62,12 @@ make start run_args=tcs34725
 #| (...)
 
 # Raw driver's values:
-iotjs lib/tcs34725.js 
+iotjs lib/tcs34725.js
 #| log: value=[65535,20885,19074,65535]
 
 ```
 
-
-### USING NODE.JS: ###
+### USING NODE.JS ###
 
 ```sh
 # git clone or use install released package:
@@ -91,11 +91,11 @@ node example tcs34725
 #| (...)
 
 # Raw driver's values:
-node lib/tcs34725.js 
+node lib/tcs34725.js
 #| log: value=[65535,20908,19103,65535]
 ```
 
-### NOTES: ###
+### NOTES ###
 
 On issues make sure that your system have I2C,
 device should be visible by user before using it:
@@ -108,11 +108,11 @@ i2cdetect -y 1
 #| 20: -- -- -- -- -- -- -- -- -- 29 -- -- -- -- -- --
 #| (...)
 ```
+
 On Raspbian, pi "user" is in "i2c" group of file "/dev/i2c-1"
 (matching RaspberryPi's header).
 
-
-## WEBTHING EXAMPLE: ##
+## WEBTHING EXAMPLE ##
 
 An extra example is provided for use from the Web (WebOfThings).
 
@@ -120,7 +120,7 @@ It's using Mozilla's IoT Schema and can be used as standalone
 or connected to things Gateway:
 
 ```sh
-cd example/color-sensor-webthing 
+cd example/color-sensor-webthing
 npm install
 npm start
 
@@ -143,13 +143,17 @@ it is faster and consuming much less resources:
 make -C example/color-sensor-webthing start
 ```
 
-[![schemas](http://image.slidesharecdn.com/iot-javascript-2019-fosdem-190206130525/95/iotjavascript2019fosdem-26-638.jpg)](https://www.slideshare.net/rzrfreefr/iotjavascript2019fosdem/26 "Schema")
+[![schemas](
+http://image.slidesharecdn.com/iot-javascript-2019-fosdem-190206130525/95/iotjavascript2019fosdem-26-638.jpg
+)](
+https://www.slideshare.net/rzrfreefr/iotjavascript2019fosdem/26
+"Schema")
 
+### CLIENTS ###
 
-### CLIENTS: ###
-
-Webthings servers are designed to be connected Mozilla's IoT which play the client role,
-but nothing prevent to create your own, in CLI (using IoT.js or Node.js) or browser.
+Webthings servers are designed to be connected Mozilla's IoT
+which play the client role, but nothing prevent to create your own,
+in CLI (using IoT.js or Node.js) or browser.
 
 For web app clients try to open this page, some are listed:
 
@@ -161,28 +165,40 @@ Note, if you want to create your app offline you can use static contents:
 
 * <http://samsunginter.net/color-sensor-js/example/color-sensor-webthing/extra/json/>
 
-Off course, prefix path (and suffix if loading from file:) should be adjusted, or overloaded using CGI params.
+Off course, prefix path (and suffix if loading from file:) should be adjusted,
+or overloaded using CGI params.
 
 You can even run webthings in the cloud:
 
 * <http://samsunginter.net/color-sensor-js/example/color-sensor-webthing/extra/aframe.html?&url=https://color-sensor-webthing.glitch.me>
 
-[![aframe-webthing](https://speakerd.s3.amazonaws.com/presentations/9d6091c2266448b88daab13082337882/slide_29.jpg#aframe-webthing)](http://purl.org/aframe-webthing# "aframe-webthing")
+[![aframe-webthing](
+https://speakerd.s3.amazonaws.com/presentations/9d6091c2266448b88daab13082337882/slide_29.jpg#aframe-webthing
+)](
+http://purl.org/aframe-webthing#
+"aframe-webthing")
 
+## DEMOS ##
 
-## DEMOS: ##
-
-[![demo](https://image.slidesharecdn.com/mozilla-things-fosdem-2019-190207162845/95/mozillathingsfosdem2019-24-638.jpg)](https://www.slideshare.net/rzrfreefr/mozillathingsfosdem2019/25 "Demo")
+[![demo](
+https://image.slidesharecdn.com/mozilla-things-fosdem-2019-190207162845/95/mozillathingsfosdem2019-24-638.jpg
+)](
+https://www.slideshare.net/rzrfreefr/mozillathingsfosdem2019/25
+"Demo")
 
 In "webthing-iotjs-opendata-20190202rzr" video, sensor is observing the lamp color,
 but it can work with any regular material.
 
-[![Presentation](https://cf.mastohost.com/v1/AUTH_91eb37814936490c95da7b85993cc2ff/socialsamsunginternet/preview_cards/images/000/004/182/original/863b031e1ab0e255.jpeg)](https://social.samsunginter.net/@rzr/101564201618024415# "WebThingIotJs")
+[![Presentation](
+https://cf.mastohost.com/v1/AUTH_91eb37814936490c95da7b85993cc2ff/socialsamsunginternet/preview_cards/images/000/004/182/original/863b031e1ab0e255.jpeg
+)](
+https://social.samsunginter.net/@rzr/101564201618024415#
+"WebThingIotJs"
+)
 
 A-Frame can also been used for rendering.
 
-
-## RESOURCES: ##
+## RESOURCES ##
 
 * <https://libraries.io/npm/color-sensor-js>
 * <https://hacks.mozilla.org/2019/03/connecting-real-things-to-virtual-worlds-using-web/>
