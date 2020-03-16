@@ -6,7 +6,7 @@
   "scripts": {
     "start": "NODE_PATH=node_modules:../.. node index"
   },
-  "author": "Philippe Coval <p.coval@samsung.com> (https://www.npmjs.com/~rzr)",
+  "author": "Philippe Coval <rzr@users.sf.net> (https://www.npmjs.com/~rzr)",
   "license": "Apache-2.0",
   "dependencies": {
     "webthing-iotjs": "^0.12.1-1"
