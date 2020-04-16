@@ -2,9 +2,15 @@
 
 [![GitHub forks](https://img.shields.io/github/forks/rzr/color-sensor-js.svg?style=social&label=Fork&maxAge=2592000)](https://GitHub.com/rzr/color-sensor-js/network/)
 [![license](https://img.shields.io/badge/license-Apache-2.0.svg)](LICENSE)
+[![Release](https://github.com/rzr/color-sensor-js/workflows/Release/badge.svg)
 [![NPM](https://img.shields.io/npm/v/color-sensor-js.svg)](https://www.npmjs.com/package/color-sensor-js)
 [![IRC Channel](https://img.shields.io/badge/chat-on%20freenode-brightgreen.svg)](https://kiwiirc.com/client/irc.freenode.net/#iot)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/9eaea080afea42e295b8778133446bbd)](https://app.codacy.com/app/rzr/color-sensor-js?utm_source=github.com&utm_medium=referral&utm_content=rzr/color-sensor-js&utm_campaign=Badge_Grade_Dashboard)
+[![Fediverse](
+https://img.shields.io/mastodon/follow/279303?domain=https%3A%2F%2Fmastodon.social&style=social
+)](
+https://mastodon.social/@rzr/104138640136323272#https://purl.org/rzr/sensors
+)
 
 [![NPM](https://nodei.co/npm/color-sensor-js.png)](https://npmjs.org/package/color-sensor-js)
 
@@ -201,7 +207,10 @@ A-Frame can also been used for rendering.
 
 ## RESOURCES ##
 
+* <https://purl.org/rzr/sensors>
+* <http://rzr.github.io/rzr-presentations/docs/sensors-webthings>
 * <https://libraries.io/npm/color-sensor-js>
+* <https://www.openhub.net/p/color-sensor-js>
 * <https://hacks.mozilla.org/2019/03/connecting-real-things-to-virtual-worlds-using-web/>
 * <https://social.samsunginter.net/@rzr/101564201618024415>
 * <https://ams.com/tcs34725>
