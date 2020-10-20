@@ -1,18 +1,46 @@
 # COLOR-SENSOR-JS #
 
-[![GitHub forks](https://img.shields.io/github/forks/rzr/color-sensor-js.svg?style=social&label=Fork&maxAge=2592000)](https://GitHub.com/rzr/color-sensor-js/network/)
-[![license](https://img.shields.io/badge/license-Apache-2.0.svg)](LICENSE)
-[![Release](https://github.com/rzr/color-sensor-js/workflows/Release/badge.svg)
-[![NPM](https://img.shields.io/npm/v/color-sensor-js.svg)](https://www.npmjs.com/package/color-sensor-js)
-[![IRC Channel](https://img.shields.io/badge/chat-on%20freenode-brightgreen.svg)](https://kiwiirc.com/client/irc.freenode.net/#iot)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/9eaea080afea42e295b8778133446bbd)](https://app.codacy.com/app/rzr/color-sensor-js?utm_source=github.com&utm_medium=referral&utm_content=rzr/color-sensor-js&utm_campaign=Badge_Grade_Dashboard)
+[![GitHub forks](
+https://img.shields.io/github/forks/rzr/color-sensor-js.svg?style=social&label=Fork&maxAge=2592000
+)](
+https://GitHub.com/rzr/color-sensor-js/network/
+)
+[![license](
+https://img.shields.io/badge/license-Apache-2.0.svg
+)](
+LICENSE
+)
+[![Release](
+https://github.com/rzr/color-sensor-js/workflows/Release/badge.svg
+)(
+https://github.com/rzr/color-sensor-js/actions?query=workflow%3ARelease
+)
+[![NPM](
+https://img.shields.io/npm/v/color-sensor-js.svg
+)](
+https://www.npmjs.com/package/color-sensor-js
+)
+[![IRC Channel](
+https://img.shields.io/badge/chat-on%20freenode-brightgreen.svg
+)](
+https://kiwiirc.com/client/irc.freenode.net/#iot
+)
+[![Codacy Badge](
+https://api.codacy.com/project/badge/Grade/9eaea080afea42e295b8778133446bbd
+)](
+https://app.codacy.com/app/rzr/color-sensor-js?utm_source=github.com&utm_medium=referral&utm_content=rzr/color-sensor-js&utm_campaign=Badge_Grade_Dashboard
+)
 [![Fediverse](
 https://img.shields.io/mastodon/follow/279303?domain=https%3A%2F%2Fmastodon.social&style=social
 )](
 https://mastodon.social/@rzr/104138640136323272#https://purl.org/rzr/sensors
 )
 
-[![NPM](https://nodei.co/npm/color-sensor-js.png)](https://npmjs.org/package/color-sensor-js)
+[![NPM](
+https://nodei.co/npm/color-sensor-js.png
+)](
+https://npmjs.org/package/color-sensor-js
+)
 
 ## INTRODUCTION ##
 
@@ -28,8 +56,8 @@ http://www.slideshare.net/slideshow/embed_code/key/cPtJI8DNhzpE4#wotxr-20190320r
 It should work with Adafruit RGB Color Sensor
 with IR Filter and White LED - TCS34725 [ADA1334] :
 
-* <https://www.amazon.com/Adafruit-Color-Sensor-Filter-White/dp/B00OKCRU5M/ref=rzr-21#>
-* <https://www.adafruit.com/product/1334>
+-   <https://www.amazon.com/Adafruit-Color-Sensor-Filter-White/dp/B00OKCRU5M/ref=rzr-21#>
+-   <https://www.adafruit.com/product/1334>
 
 ## USAGE ##
 
@@ -46,7 +74,7 @@ For using I2C TCS34725 sensor, check i2c chapter first.
 
 Install recent version of IoT.js:
 
-* <https://github.com/rzr/webthing-iotjs/wiki/IotJs>
+-   <https://github.com/rzr/webthing-iotjs/wiki/IotJs>
 
 ```sh
 git clone --recursive --depth 1 https://github.com/rzr/color-sensor-js
@@ -164,20 +192,20 @@ in CLI (using IoT.js or Node.js) or browser.
 
 For web app clients try to open this page, some are listed:
 
-* <http://samsunginter.net/color-sensor-js/>
-* HTML one: Background should be updated in realtime
-* A-Frame one: will also display update in 3D in browser or VR/AR headset
+-   <http://rzr.github.io/color-sensor-js/>
+-   HTML one: Background should be updated in realtime
+-   A-Frame one: will also display update in 3D in browser or VR/AR headset
 
 Note, if you want to create your app offline you can use static contents:
 
-* <http://samsunginter.net/color-sensor-js/example/color-sensor-webthing/extra/json/>
+-   <http://rzr.github.io/color-sensor-js/example/color-sensor-webthing/extra/json/>
 
 Off course, prefix path (and suffix if loading from file:) should be adjusted,
 or overloaded using CGI params.
 
 You can even run webthings in the cloud:
 
-* <http://samsunginter.net/color-sensor-js/example/color-sensor-webthing/extra/aframe.html?&url=https://color-sensor-webthing.glitch.me>
+-   <http://rzr.github.io/color-sensor-js/example/color-sensor-webthing/extra/aframe.html?&url=https://color-sensor-webthing.glitch.me>
 
 [![aframe-webthing](
 https://speakerd.s3.amazonaws.com/presentations/9d6091c2266448b88daab13082337882/slide_29.jpg#aframe-webthing
@@ -197,9 +225,9 @@ In "webthing-iotjs-opendata-20190202rzr" video, sensor is observing the lamp col
 but it can work with any regular material.
 
 [![Presentation](
-https://cf.mastohost.com/v1/AUTH_91eb37814936490c95da7b85993cc2ff/socialsamsunginternet/preview_cards/images/000/004/182/original/863b031e1ab0e255.jpeg
+https://mastodon.social/@rzr/105983652802470207#wotxr20190320rzr
 )](
-https://social.samsunginter.net/@rzr/101564201618024415#
+https://mastodon.social/@rzr/103612381551603447#wotxr20190320rzr
 "WebThingIotJs"
 )
 
@@ -207,24 +235,26 @@ A-Frame can also been used for rendering.
 
 ## RESOURCES ##
 
-* <https://purl.org/rzr/sensors>
-* <http://rzr.github.io/rzr-presentations/docs/sensors-webthings>
-* <https://libraries.io/npm/color-sensor-js>
-* <https://www.openhub.net/p/color-sensor-js>
-* <https://hacks.mozilla.org/2019/03/connecting-real-things-to-virtual-worlds-using-web/>
-* <https://social.samsunginter.net/@rzr/101564201618024415>
-* <https://ams.com/tcs34725>
-* <https://ams.com/documents/20143/36005/TCS3472_DS000390_2-00.pdf>
-* <https://www.broadcom.com/products/optical-sensors/integrated-ambient-light-and-proximity-sensors/apds-9960>
-* <https://github.com/rzr/webthing-iotjs/wiki/Sensor>
-* <https://github.com/rzr/generic-sensors-lite>
-* <https://github.com/rzr/mozilla-iot-generic-sensors-adapter/>
-* <https://fosdem.org/2019/schedule/event/project_things/>
-* <https://api.npms.io/v2/package/color-sensor-js>
-* <https://npm.runkit.com/color-sensor-js>
-* <https://github.com/jerryscript-project/iotjs-modules>
-* <https://github.com/w3c/ambient-light/issues/9>
-* <https://www.af83.com/in-realtime/laval-virtual-2019>
-* <https://en.wikipedia.org/wiki/Colorimetry>
-* <https://github.com/kelly/node-i2c/issues/90>
-* <https://github.com/WiringPi/WiringPi-Node/blob/master/DOCUMENTATION.md#tcs34725>
+-   <https://purl.org/rzr/>
+-   <https://purl.org/rzr/sensors>
+-   <http://rzr.github.io/rzr-presentations/docs/sensors-webthings>
+-   <https://libraries.io/npm/color-sensor-js>
+-   <https://www.openhub.net/p/color-sensor-js>
+-   <https://yarnpkg.com/package/color-sensor-js>
+-   <https://hacks.mozilla.org/2019/03/connecting-real-things-to-virtual-worlds-using-web/>
+-   <https://mastodon.social/@rzr/103612381551603447#ColorSensor>
+-   <https://ams.com/tcs34725>
+-   <https://ams.com/documents/20143/36005/TCS3472_DS000390_2-00.pdf>
+-   <https://www.broadcom.com/products/optical-sensors/integrated-ambient-light-and-proximity-sensors/apds-9960>
+-   <https://github.com/rzr/webthing-iotjs/wiki/Sensor>
+-   <https://github.com/rzr/generic-sensors-lite>
+-   <https://github.com/rzr/mozilla-iot-generic-sensors-adapter/>
+-   <https://fosdem.org/2019/schedule/event/project_things/>
+-   <https://api.npms.io/v2/package/color-sensor-js>
+-   <https://npm.runkit.com/color-sensor-js>
+-   <https://github.com/jerryscript-project/iotjs-modules>
+-   <https://github.com/w3c/ambient-light/issues/9>
+-   <https://www.af83.com/in-realtime/laval-virtual-2019>
+-   <https://en.wikipedia.org/wiki/Colorimetry>
+-   <https://github.com/kelly/node-i2c/issues/90>
+-   <https://github.com/WiringPi/WiringPi-Node/blob/master/DOCUMENTATION.md#tcs34725>
