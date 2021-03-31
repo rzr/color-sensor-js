@@ -1,6 +1,6 @@
 {
   "name": "color-sensor-webthing",
-  "version": "0.0.17",
+  "version": "0.0.18",
   "description": "Webthing example to be used as standalone or with Mozilla's IoT gateway",
   "main": "index.js",
   "scripts": {
